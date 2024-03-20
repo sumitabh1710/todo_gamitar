@@ -1,0 +1,148 @@
+body {
+  font-family: monospace;
+  font-size: large;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #ddd1c7;
+}
+
+.container {
+  height: fit-content;
+  padding: 50px;
+}
+
+.to-do-title {
+  background-color: #4b4a67;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 2%;
+  color: aliceblue;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+}
+
+.list h2 {
+  margin-top: 0;
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.filters label {
+  margin-right: 10px;
+}
+
+.lists-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-buttons {
+  margin: 10px 0px;
+  border-bottom: 1px solid #7e89876f;
+  padding-bottom: 15px;
+}
+
+#todo-table {
+  width: 100%;
+  height: fit-content;
+}
+
+.table-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.table-description {
+  max-width: 400px;
+}
+
+input {
+  height: 30px;
+  border: 1px solid #7e89876f;
+  border-radius: 6px;
+  background-color: transparent;
+  padding-left: 8px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+input:focus {
+  border: 2px solid #4b4a67;
+  outline: none;
+}
+
+select {
+  height: 30px;
+  border: 1px solid #7e89876f;
+  border-radius: 6px;
+  background-color: transparent;
+  padding-left: 8px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+select option {
+  background-color: #ddd1c7;
+}
+
+.small-btn {
+  margin-left: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #7e8987;
+  color: aliceblue;
+  cursor: pointer;
+  transition: all 300ms linear;
+  font-family: monospace;
+}
+
+.small-btn:hover {
+  background-color: #4b4a67;
+}
+
+td {
+  text-align: center;
+}
+
+.active {
+  background-color: #4b4a67;
+}
+
+#add-todo-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#add-todo-form input,
+#add-todo-form select,
+#add-todo-form button {
+  margin-right: 10px;
+}
+
+#add-todo-form input[type="text"],
+#add-todo-form input[type="date"] {
+  flex: 1;
+}

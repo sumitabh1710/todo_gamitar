@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="to-do-title"><h1>To-Do App</h1></div>
+    <div class="container">
+      <div class="filters">
+        <div>
+          <label for="priority-filter">Filter by Priority:</label>
+          <select id="priority-filter">
+            <option value="all">All</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div>
+          <label for="date-filter">Filter by End Date:</label>
+          <input type="date" id="date-filter" />
+        </div>
+      </div>
+      <form id="add-todo-form">
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Title"
+          autocomplete="off"
+          required
+        />
+        <input
+          type="text"
+          id="description"
+          name="description"
+          placeholder="Description"
+          autocomplete="off"
+          required
+        />
+        <input type="date" id="end-date" name="endDate" required />
+        <select id="priority" name="priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button type="submit" class="small-btn">Add Todo</button>
+      </form>
+      <div class="lists-container">
+        <div class="status-buttons">
+          <button
+            class="small-btn active"
+            id="todo-btn"
+            onclick="switchStatus('todo')"
+          >
+            Todo
+          </button>
+          <button
+            class="small-btn"
+            id="doing-btn"
+            onclick="switchStatus('doing')"
+          >
+            Doing
+          </button>
+          <button
+            class="small-btn"
+            id="done-btn"
+            onclick="switchStatus('done')"
+          >
+            Done
+          </button>
+        </div>
+        <table id="todo-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>End Date</th>
+              <th>Priority</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="todo-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
